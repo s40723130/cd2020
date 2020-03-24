@@ -1,15 +1,160 @@
-<h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h2>Grouping</h2>
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>CMSiMDE 網際內容管理系統</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">CMSiMDE 網際內容管理系統</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='Grouping.html'>Grouping</a><ul class='dropdown'><li><a href='2a.html'>2a</a></li></li></ul></ul><li><a href='Develop.html'>Develop</a><li class='has-children'><a href='week.html'>week</a><ul class='dropdown'><li><a href='week3.html'>week3</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Python3.8.2.html'>Python3.8.2</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='2a.html'>Next</a> >> 2a<br /><h1>Grouping</h1>
 <h4>亂數分組:</h4>
 <p>Base upon the Dart + Python random grouping system and the <a href="https://github.com/mdecourse/wcms-scrum1">https://github.com/mdecourse/wcms-scrum1</a> (<a href="https://wcms-scrum1.herokuapp.com/gear_index">https://wcms-scrum1.herokuapp.com/gear_index</a>), we may be able to create more collaborative product design service.</p>
 <p>Flask Python programs can be deployed at Heroku or self install Ubuntu server. ( <a href="https://mdecp2018.github.io/finalproject-bgx/content/Heroku%20%E8%A8%AD%E5%AE%9A.html">https://mdecp2018.github.io/finalproject-bgx/content/Heroku%20%E8%A8%AD%E5%AE%9A.html</a>) </p>
@@ -689,21 +834,46 @@
 </tr>
 </tbody>
 </table>
-<h3>2a</h3>
-<p>==============================<br/>group 1<br/>Repository:<span> </span><a href="https://github.com/s40723104/cd2020">40723104</a><span> </span>| Site:<span> </span><a href="https://s40723104.github.io/cd2020">40723104</a><br/>Repository:<span> </span><a href="https://github.com/s40723107/cd2020">40723107</a><span> </span>| Site:<span> </span><a href="https://s40723107.github.io/cd2020">40723107</a><br/>Repository:<span> </span><a href="https://github.com/s40723114/cd2020">40723114</a><span> </span>| Site:<span> </span><a href="https://s40723114.github.io/cd2020">40723114</a> <span>(group leader)</span><br/>Repository:<span> </span><a href="https://github.com/s40723115/cd2020">40723115</a><span> </span>| Site:<span> </span><a href="https://s40723115.github.io/cd2020">40723115</a><br/>Repository:<span> </span><a href="https://github.com/s40723118/cd2020">40723118</a><span> </span>| Site:<span> </span><a href="https://s40723118.github.io/cd2020">40723118</a><br/>Repository:<span> </span><a href="https://github.com/s40723122/cd2020">40723122</a><span> </span>| Site:<span> </span><a href="https://s40723122.github.io/cd2020">40723122</a><br/>Repository:<span> </span><a href="https://github.com/s40723123/cd2020">40723123</a><span> </span>| Site:<span> </span><a href="https://s40723123.github.io/cd2020">40723123</a><br/>Repository:<span> </span><a href="https://github.com/s40723140/cd2020">40723140</a><span> </span>| Site:<span> </span><a href="https://s40723140.github.io/cd2020">40723140</a><br/>Repository:<span> </span><a href="https://github.com/s40723149/cd2020">40723149</a><span> </span>| Site:<span> </span><a href="https://s40723149.github.io/cd2020">40723149</a><br/>Repository:<span> </span><a href="https://github.com/s40723151/cd2020">40723151</a><span> </span>| Site:<span> </span><a href="https://s40723151.github.io/cd2020">40723151</a><br/>Repository:<span> </span><a href="https://github.com/s40723153/cd2020">40723153</a><span> </span>| Site:<span> </span><a href="https://s40723153.github.io/cd2020">40723153</a><br/>Repository:<span> </span><a href="https://github.com/s40723154/cd2020">40723154</a><span> </span>| Site:<span> </span><a href="https://s40723154.github.io/cd2020">40723154</a><br/>Repository:<span> </span><a href="https://github.com/s40723155/cd2020">40723155</a><span> </span>| Site:<span> </span><a href="https://s40723155.github.io/cd2020">40723155</a><br/>==============================<br/>group 2<br/>Repository:<span> </span><a href="https://github.com/40623143/cd2020">40623143</a><span> </span>| Site:<span> </span><a href="https://40623143.github.io/cd2020">40623143</a><br/>Repository:<span> </span><a href="https://github.com/s40723108/cd2020">40723108</a><span> </span>| Site:<span> </span><a href="https://s40723108.github.io/cd2020">40723108</a><br/>Repository:<span> </span><a href="https://github.com/s40723127/cd2020">40723127</a><span> </span>| Site:<span> </span><a href="https://s40723127.github.io/cd2020">40723127</a><br/>Repository:<span> </span><a href="https://github.com/s40723132/cd2020">40723132</a><span> </span>| Site:<span> </span><a href="https://s40723132.github.io/cd2020">40723132</a><br/>Repository:<span> </span><a href="https://github.com/s40723133/cd2020">40723133</a><span> </span>| Site:<span> </span><a href="https://s40723133.github.io/cd2020">40723133</a><br/>Repository:<span> </span><a href="https://github.com/s40723137/cd2020">40723137</a><span> </span>| Site:<span> </span><a href="https://s40723137.github.io/cd2020">40723137</a><br/>Repository:<span> </span><a href="https://github.com/s40723141/cd2020">40723141</a><span> </span>| Site:<span> </span><a href="https://s40723141.github.io/cd2020">40723141</a><br/>Repository:<span> </span><a href="https://github.com/s40723143/cd2020">40723143</a><span> </span>| Site:<span> </span><a href="https://s40723143.github.io/cd2020">40723143</a><br/>Repository:<span> </span><a href="https://github.com/s40723144/cd2020">40723144</a><span> </span>| Site:<span> </span><a href="https://s40723144.github.io/cd2020">40723144</a><br/>Repository:<span> </span><a href="https://github.com/s40723147/cd2020">40723147</a><span> </span>| Site:<span> </span><a href="https://s40723147.github.io/cd2020">40723147</a><br/>Repository:<span> </span><a href="https://github.com/s40723148/cd2020">40723148</a><span> </span>| Site:<span> </span><a href="https://s40723148.github.io/cd2020">40723148</a><br/>Repository:<span> </span><a href="https://github.com/s40723150/cd2020">40723150</a><span> </span>| Site:<span> </span><a href="https://s40723150.github.io/cd2020">40723150</a> <span>(group leader)</span><br/>==============================<br/>group 3<br/>Repository:<span> </span><a href="https://github.com/s40723103/cd2020">40723103</a><span> </span>| Site:<span> </span><a href="https://s40723103.github.io/cd2020">40723103</a><br/>Repository:<span> </span><a href="https://github.com/s40723110/cd2020">40723110</a><span> </span>| Site:<span> </span><a href="https://s40723110.github.io/cd2020">40723110</a> <span>(group leader)</span><br/>Repository:<span> </span><a href="https://github.com/s40723112/cd2020">40723112</a><span> </span>| Site:<span> </span><a href="https://s40723112.github.io/cd2020">40723112</a><br/>Repository:<span> </span><a href="https://github.com/s40723120/cd2020">40723120</a><span> </span>| Site:<span> </span><a href="https://s40723120.github.io/cd2020">40723120</a><br/>Repository:<span> </span><a href="https://github.com/s40723125/cd2020">40723125</a><span> </span>| Site:<span> </span><a href="https://s40723125.github.io/cd2020">40723125</a><br/>Repository:<span> </span><a href="https://github.com/s40723126/cd2020">40723126</a><span> </span>| Site:<span> </span><a href="https://s40723126.github.io/cd2020">40723126</a><br/>Repository:<span> </span><a href="https://github.com/s40723128/cd2020">40723128</a><span> </span>| Site:<span> </span><a href="https://s40723128.github.io/cd2020">40723128</a><br/>Repository:<span> </span><a href="https://github.com/s40723130/cd2020">40723130</a><span> </span>| Site:<span> </span><a href="https://s40723130.github.io/cd2020">40723130</a><br/>Repository:<span> </span><a href="https://github.com/s40723139/cd2020">40723139</a><span> </span>| Site:<span> </span><a href="https://s40723139.github.io/cd2020">40723139</a><br/>Repository:<span> </span><a href="https://github.com/s40723142/cd2020">40723142</a><span> </span>| Site:<span> </span><a href="https://s40723142.github.io/cd2020">40723142</a><br/>Repository:<span> </span><a href="https://github.com/s40723145/cd2020">40723145</a><span> </span>| Site:<span> </span><a href="https://s40723145.github.io/cd2020">40723145</a><br/>Repository:<span> </span><a href="https://github.com/s40723146/cd2020">40723146</a><span> </span>| Site:<span> </span><a href="https://s40723146.github.io/cd2020">40723146</a><br/>==============================<br/>group 4<br/>Repository:<span> </span><a href="https://github.com/40423155/cd2020">40423155</a><span> </span>| Site:<span> </span><a href="https://40423155.github.io/cd2020">40423155</a><br/>Repository:<span> </span><a href="https://github.com/s40723101/cd2020">40723101</a><span> </span>| Site:<span> </span><a href="https://s40723101.github.io/cd2020">40723101</a><br/>Repository:<span> </span><a href="https://github.com/s40723102/cd2020">40723102</a><span> </span>| Site:<span> </span><a href="https://s40723102.github.io/cd2020">40723102</a><br/>Repository:<span> </span><a href="https://github.com/s40723106/cd2020">40723106</a><span> </span>| Site:<span> </span><a href="https://s40723106.github.io/cd2020">40723106</a><br/>Repository:<span> </span><a href="https://github.com/s40723111/cd2020">40723111</a><span> </span>| Site:<span> </span><a href="https://s40723111.github.io/cd2020">40723111</a><br/>Repository:<span> </span><a href="https://github.com/s40723119/cd2020">40723119</a><span> </span>| Site:<span> </span><a href="https://s40723119.github.io/cd2020">40723119</a><br/>Repository:<span> </span><a href="https://github.com/s40723121/cd2020">40723121</a><span> </span>| Site:<span> </span><a href="https://s40723121.github.io/cd2020">40723121</a><br/>Repository:<span> </span><a href="https://github.com/s40723124/cd2020">40723124</a><span> </span>| Site:<span> </span><a href="https://s40723124.github.io/cd2020">40723124</a><br/>Repository:<span> </span><a href="https://github.com/s40723134/cd2020">40723134</a><span> </span>| Site:<span> </span><a href="https://s40723134.github.io/cd2020">40723134</a><br/>Repository:<span> </span><a href="https://github.com/s40723135/cd2020">40723135</a><span> </span>| Site:<span> </span><a href="https://s40723135.github.io/cd2020">40723135</a><br/>Repository:<span> </span><a href="https://github.com/s40723136/cd2020">40723136</a><span> </span>| Site:<span> </span><a href="https://s40723136.github.io/cd2020">40723136</a><br/>Repository:<span> </span><a href="https://github.com/s40723138/cd2020">40723138</a><span> </span>| Site:<span> </span><a href="https://s40723138.github.io/cd2020">40723138</a> <span>(group leader)</span></p>
-<p>Grouping List:</p>
-<p>[['40723104', '40723107', '40723114', '40723115', '40723118', '40723122', '40723123', '40723140', '40723149', '40723151', '40723153', '40723154', '40723155'], ['40623143', '40723108', '40723127', '40723132', '40723133', '40723137', '40723141', '40723143', '40723144', '40723147', '40723148', '40723150'], ['40723103', '40723110', '40723112', '40723120', '40723125', '40723126', '40723128', '40723130', '40723139', '40723142', '40723145', '40723146'], ['40423155', '40723101', '40723102', '40723106', '40723111', '40723119', '40723121', '40723124', '40723134', '40723135', '40723136', '40723138']]</p>
-</div>
-</div>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>week</h1>
-<h2>week3</h2>
-<p>taskleader :40723145 40723126 40723146<br/>      1. Describe how to do an efficient random grouping for this course or do the roll calling randomly?</p>
-<p><br/>taskleader :40723110 40723112 40723130<br/>      2. Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain CMSiMDE website, Pelican blog and Reveal.js presentation on Github?</p>
-<p><br/>taskleader :40723125 40723103 40723120 40723142<br/>       3. What do you need to know from http://www.coppeliarobotics.com/helpFiles/index.html to implement a four-wheeled robot?</p>
-<p><span>w3開會紀錄</span></p>
-<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/c06esX1zO90" width="560"></iframe></span></p>
-<p></p>
+<br />About << <a href='About.html'>Previous</a> <a href='2a.html'>Next</a> >> 2a</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
