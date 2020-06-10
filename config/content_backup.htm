@@ -706,11 +706,24 @@
 <p><br/>taskleader :40723125 40723103 40723120 40723142<br/>       3. What do you need to know from http://www.coppeliarobotics.com/helpFiles/index.html to implement a four-wheeled robot?</p>
 <p><span>w3開會紀錄</span></p>
 <h2>week4</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/lObYwRDd4Ro" width="560"></iframe></p><h2>week5</h2>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/lObYwRDd4Ro" width="560"></iframe></p>
+<h2>week5</h2>
 <h2>week6</h2>
 <h2>week7</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/1y1WN3Vgm6M" width="560"></iframe></p>
-<p><span></span></p><h1>MechanicalDesignProcess</h1>
+<br/><br/><br/><br/><span></span>week16
+<p><span>我這周剛拿到畫圖組的完成品，但已經開始使用CoppeliaSim將其組裝</span></p>
+<p><span><img alt="" height="293" src="/images/擷取01.PNG" width="566"/></span></p>
+<p></p>
+<p><img alt="" height="244" src="/images/擷取02.PNG" width="393"/></p>
+<p><img alt="" height="235" src="/images/擷取05.PNG" width="562"/></p>
+<p>增加物理條件:</p>
+<p>先雙擊點選左側要的物件</p>
+<p><img alt="" height="337" src="/images/擷取06.PNG" width="298"/></p>
+<p><span>點完後會出現此視窗並點擊show dynamic propertices dialog</span></p>
+<p><img alt="" height="474" src="/images/擷取04.PNG" width="425"/></p>
+<p><span>進入後把body is respondable和body is dinamic勾選</span></p>
+<p><img alt="" height="588" src="/images/擷取03.PNG" width="430"/></p><h1>MechanicalDesignProcess</h1>
 <h2>part3</h2>
 <p>我們的設計都將從產品的想法開始。這些想法需要被驗證<span>,</span>因此<span>,</span>我們將著手構建原型<span>,</span>如果這些原型通過書面規範<span>,</span>我們將通過圖紙記錄我們的設計。我們需要此文檔才能以可重複的方式構建更多產品。本章將讓我們從僅僅對產品的想法出發<span>,</span>一直到以最佳方式構成所有單個物件的最終設計。我們從<span>"</span>空白紙<span>"</span>開始設計<span>,</span>那張紙將充滿物理性質。第一個令人關切的項目是確定紙張是否確實為<span>"</span>空白<span>"</span>或是否存在一些限制。下一個值得關注的項目是確定要包括哪些物理性質。然後<span>,</span>我們應該假設這些性質是基於整體設計目標的最佳配置<span>,</span>因此<span>,</span>我們將以一些詞語來總結我們對該物件配置的選擇。</p>
 <p> </p>
@@ -812,21 +825,8 @@
 <p>5.彈性模量。6.結束條件。7.負載條件。8.最壞的情況下加載。9.組合加載。</p>
 <p>3.4.1懸臂梁分析（來自Tecknit EMI屏蔽產品手冊）</p>
 <p>大多數電子外殼應力分析都可以通過計算“簡單”梁來表徵。但是，首先讓我們定義一個光束。Roark和Young（請參閱參考資料[1]）對樑的撓曲公式的應用進行以下假設：•樑的長度必須與其深度成比例，對於金屬梁，跨度/深度比應為8或更大，而15為15或更多用於具有相對薄腹板的梁。Byars和Snyder（參見參考文獻[2]）是一個很好的例子，如圖3.3所示。確定法蘭正下方的A點處的主要法向應力和剪應力。假定彈性行為，並忽略壁上的任何應力集中。解決方案：梁左端的彎矩為：</p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
+<p> <img alt="" height="364" src="/images/擷取.PNG" width="513"/> </p>
+<p><img alt="" height="82" src="/images/擷取1.PNG" width="406"/></p>
 <p>（當考慮問題中的彎曲應力和剪切應力時，使用莫爾圓來求總應力。）但是，請注意，在這樣短的構件中，其橫截面薄（跨度/深度比= 24/15） = 1.7），則撓曲公式的有效性值得懷疑。請注意，例如，剪應力和法向應力的數量級相同。另外，請注意，要應用正確的跨度/深度比，此樑的長度必須在19英尺的數量級上。以上示例的重要性在於強調了橫向剪應力對最大應力的影響。確定樑的最大應力時，除非用盡所有可能產生最大主應力的彎曲應力和剪切應力組合，否則對結果不滿意。經常，剪切和彎矩圖的構建以及彎曲應力和橫向剪切應力的數量級比較將大大簡化問題。使用上面示例中的一些梁應力公式，我們將繼續解決電子外殼設計人員可能面臨的問題的“主推力”。那就是確定“蓋板”到外殼底盤的（最大）緊固件距離（“ C”）。這種類型的問題涉及外殼周圍的環境密封，這將提供密封作用（請參閱參考資料6）•防止灰塵，濕氣和蒸汽進入•足夠的EMI屏蔽 我們將繼續解決電子外殼設計人員可能面臨的問題的“主旨”。那就是確定“蓋板”到外殼底盤的（最大）緊固件距離（“ C”）。這種類型的問題涉及外殼周圍的環境密封，這將提供密封作用（請參閱參考資料6）•防止灰塵，濕氣和蒸汽進入•足夠的EMI屏蔽 我們將繼續解決電子外殼設計人員可能面臨的問題的“主旨”。那就是確定“蓋板”到外殼底盤的（最大）緊固件距離（“ C”）。這種類型的問題涉及外殼周圍的環境密封，這將提供密封作用（請參閱參考資料6）•防止灰塵，濕氣和蒸汽進入•足夠的EMI屏蔽</p>
 <p>我們將在第一章中討論問題的屏蔽部分。9.現在，我們將解決設計基本密封設計幾何形狀方面的“結構性問題”，以保持足夠的強度以提供防潮密封。我將引用《 Tecknit EMI屏蔽產品手冊》中的某些材料（請參閱參考資料[3]）。請注意，這裡我使用的是“手冊”中的一些參考資料。即使在“ Google搜索”時代，這仍然是設計師寶貴的信息來源。這些手冊中有許多是精裝本，可以從原始設備製造商處獲得，以用於設計其特定組件。現在，許多“設計指南”信息都可以在線獲得（而不是精裝手冊中提供）。通常，組件製造商的銷售人員知道當今設計人員可以使用的各種“指南”和在線信息。現在，回到這個環境密封問題的結構考慮：</p>
 <p>A.封印材料：稍後在第1章中介紹。7，“產品環境（密封）”</p>
@@ -919,8 +919,10 @@
 <li>Byars EF，Snyder RD（1969）可變形體的工程力學。International Textbook Co.，Scranton</li>
 </ol>
 <p>3.有關EMI屏蔽材料的選擇和應用的設計指南。TECKNIT，《 EMI屏蔽產品》（1991年）。</p>
-<p>4.《注塑成型》雜誌，1998年5月，陶氏材料工程中心的R. Cramer</p><h1>Assignment1</h1>
-<p></p><h2>Python3.8.2</h2>
+<p>4.《注塑成型》雜誌，1998年5月，陶氏材料工程中心的R. Cramer</p>
+<h1>Assignment1</h1>
+<p></p>
+<h2>Python3.8.2</h2>
 <h4>basic Win10 portable programming</h4>
 <p>在你的可攜下創建一個data子目錄  :  </p>
 <p></p>
@@ -1349,4 +1351,6 @@
 </tbody>
 </table>
 </div>
-</div></li></ul>
+</div>
+</li>
+</ul>
