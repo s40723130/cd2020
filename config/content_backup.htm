@@ -905,8 +905,195 @@
 </ol>
 <p>3.有關EMI屏蔽材料的選擇和應用的設計指南。TECKNIT，《 EMI屏蔽產品》（1991年）。</p>
 <p>4.《注塑成型》雜誌，1998年5月，陶氏材料工程中心的R. Cramer</p><h2>week7</h2>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/1y1WN3Vgm6M" width="560"></iframe></p>
-<h2>week13-14</h2>
+<p><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/1y1WN3Vgm6M" width="560"></iframe></p>
+<h2>week11-12</h2>
+<h5>VirtualBox</h5>
+<p>以下的工作我重複做了好幾遍，但最後都以失敗坐收。</p>
+<h5>Setting VirtualBox Network</h5>
+<p>在VirtualBox→Files→Preferences<span>→Network<br/>新增一個網路設定，支援DHCP和IPV6</span></p>
+<p><span>IP 查詢</span></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_49896">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">ifconfig</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>若跳出尚未安裝net-tools的話請安裝</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_491156">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt install net-tools</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>若在<strong>IPv6</strong>環境下有跳出網路錯誤</p>
+<ol>
+<li>IPv6環境設定是否正確<br/><br/><span>請到 /etc/netplan 目錄下檢查 00-installer-config.yaml 檔案內的設定</span><span></span><span><span><br/></span></span>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_673574">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">cd /etc/netplan</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">sudo vi 00-installer-config.yaml</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<span>00-installer-config.yaml</span>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_171545">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain"># This is the network config written by 'subiquity'</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">network:</code></div>
+<div class="line number3 index2 alt2"><code class="html spaces">    </code><code class="html plain">ethernets:</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces">        </code><code class="html plain">enpes3:</code></div>
+<div class="line number5 index4 alt2"><code class="html spaces">            </code><code class="html plain">dhcp4: true</code></div>
+<div class="line number6 index5 alt1"><code class="html spaces">            </code><code class="html plain">dhcp6: true</code></div>
+<div class="line number7 index6 alt2"><code class="html spaces">            </code><code class="html plain">nameservers:</code></div>
+<div class="line number8 index7 alt1"><code class="html spaces">                </code><code class="html plain">addresses:</code></div>
+<div class="line number9 index8 alt2"><code class="html spaces">                    </code><code class="html plain">- 2001:b000:168::1</code></div>
+<div class="line number10 index9 alt1"><code class="html spaces">    </code><code class="html plain">version: 2</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>編輯完成後:wq跳出編輯並儲存，並更新netplan設定</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_129668">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo netplan apply</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p></p>
+</li>
+<li>proxy問題<br/>請到 /etc/apt/apt.conf.d 目錄下檢查是否有proxy.conf檔案，若沒有，請用新增(直接用vi編輯器開啟proxy.conf就會自動新增)<br/>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_604807">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">cd /etc/apt/apt.conf.d</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">sudo vi proxy.conf</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>proxy.conf的檔案內容</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_892282">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">Acquire::http::proxy "http://[2001:288:6004:17::填port號]:3128";</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br/>先增完內容後要更新apt<br/>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_329262">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt update</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ol>
+<p>網路設定完成後可以啟動wsgi.py</p>
+<p>再用電腦上的網頁(不是虛擬主機的網頁)到 <a href="https://localhost:8443/%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E9%80%A3%E4%B8%8A%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%88%90%E5%8A%9F%E9%80%A3%E4%B8%8A%E5%BE%8C%E5%B0%B1%E6%8F%9Bputty">https://localhost:8443/看是否成功連上，如果成功連上後就換putty</a></p>
+<p></p><h2>week13-14</h2>
 <p>CoppeliaSim學習</p>
 <p>首先簡略瀏覽關於coppeliaSim用戶手冊中所負責的部分區域檢視，大略看過標題及裡面分支出來的內容後，針對使用介面之解說有做進一步了解，甚至有做出特定使用者介面使少數特定族群受惠，對於視圖與位置操作方向也詳細說明並加入快捷鍵使用方式以及命令行的詳細解說。</p>
 <p>僅看第一個標題的內容就發現到以上幾個需要特別注意的重點，剩餘兩個標題所表達之內容便偏向於外部環境設定與模組方面的專業知識，藉由圖例所輔助說明能較為知道手冊所想表達的意涵，也能修正對於單單只看文字而想像出操作步驟與有附真實圖例比較之下的差異性，並導正之間所產生的誤會，也可以從而對內容加深印象。</p>
@@ -927,7 +1114,21 @@
 <p><img alt="" height="474" src="/images/擷取04.PNG" width="425"/></p>
 <p><span>進入後把body is respondable和body is dinamic勾選</span></p>
 <p><img alt="" height="588" src="/images/擷取03.PNG" width="430"/></p>
-<h2>week16</h2><h1>MechanicalDesignProcess</h1>
+<h2>week16</h2>
+<p><span>這周主要是在用分組coppeliasim</span></p>
+<p><img alt="" height="334" src="/images/17擷取.PNG" width="456"/></p>
+<p>先在左側按右健 - add - joint - revolute新增四個joint</p>
+<p><img alt="" height="246" src="/images/17擷取1.PNG" width="256"/></p>
+<p><span>將四個joint分別對應到四個輪軸位置，利用joint使車輪和本體連結並做傳動</span></p>
+<p><img alt="" height="276" src="/images/17擷取2.PNG" width="400"/></p>
+<p><img alt="" height="216" src="/images/17擷取3.PNG" width="459"/></p>
+<p><img alt="" height="301" src="/images/17擷取4.PNG" width="380"/></p>
+<p><img alt="" height="251" src="/images/17擷取5.PNG" width="401"/></p>
+<p></p>
+<h2>week17</h2>
+<p>在我把車子的各個零件於CoppliaSim裡組合完成後，我啟動並發現個零件於做動時會閃架。</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/qEF3SfyVpp8" width="560"></iframe>後來經過查詢和詢問後發現組裝完成的是屬於skin的部分，所以需要畫出實體在把skin套上才有辦法正常做動。</p>
+<p></p><h1>MechanicalDesignProcess</h1>
 <h2>part3</h2>
 <p>我們的設計都將從產品的想法開始。這些想法需要被驗證<span>,</span>因此<span>,</span>我們將著手構建原型<span>,</span>如果這些原型通過書面規範<span>,</span>我們將通過圖紙記錄我們的設計。我們需要此文檔才能以可重複的方式構建更多產品。本章將讓我們從僅僅對產品的想法出發<span>,</span>一直到以最佳方式構成所有單個物件的最終設計。我們從<span>"</span>空白紙<span>"</span>開始設計<span>,</span>那張紙將充滿物理性質。第一個令人關切的項目是確定紙張是否確實為<span>"</span>空白<span>"</span>或是否存在一些限制。下一個值得關注的項目是確定要包括哪些物理性質。然後<span>,</span>我們應該假設這些性質是基於整體設計目標的最佳配置<span>,</span>因此<span>,</span>我們將以一些詞語來總結我們對該物件配置的選擇。</p>
 <p> </p>
