@@ -54,6 +54,23 @@
 <v t="leo.20200630221611.13"><vh>w8</vh></v>
 </v>
 </v>
+<v t="leo.20200630231640.1"><vh>各式內容引用範例</vh>
+<v t="leo.20200630231640.2"><vh>W10</vh>
+<v t="leo.20200630231640.3"><vh>W10</vh></v>
+</v>
+<v t="leo.20200630231640.8"><vh>W13</vh>
+<v t="leo.20200630231640.9"><vh>W13</vh></v>
+</v>
+<v t="leo.20200630231640.12"><vh>W15</vh>
+<v t="leo.20200630231640.13"><vh>W15</vh></v>
+</v>
+<v t="leo.20200630231640.14"><vh>W15</vh>
+<v t="leo.20200630231640.15"><vh>W15</vh></v>
+</v>
+<v t="leo.20200630231640.16"><vh>W16</vh>
+<v t="leo.20200630231640.17"><vh>W16</vh></v>
+</v>
+</v>
 </v>
 </v>
 </v>
@@ -350,16 +367,12 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200630221611.11">## W7
+<t tx="leo.20200630221611.11">## 第7週
 
-翻譯&amp;進行直播測試
+進行直播測驗
 
-[Camera Sensors](https://cyberbotics.com/doc/guide/camera-sensors)
-
-[DistanceSensor Sensors](https://cyberbotics.com/doc/guide/distancesensor-sensors)
 &lt;hr&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hEZbNIzWe64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week7.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 </t>
 <t tx="leo.20200630221611.12">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -372,11 +385,11 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200630221611.13">## W8
+<t tx="leo.20200630221611.13">## 第8週
 
-下載[CoppeliaSim](https://www.coppeliarobotics.com/)，並放到可攜系統上
-
-將 leo 升級到6.2.1
+進行第二次直播測驗
+&lt;hr&gt;
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week8.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 </t>
 <t tx="leo.20200630221611.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -390,7 +403,7 @@ vertical: body pane on the botton</t>
 						
 </t>
 <t tx="leo.20200630221611.3">## 期中(1~8週)
-### W3
+### 第3週
 
 用OBS進行線上開會討論分組
 
@@ -406,7 +419,7 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200630221611.5">## W4
+<t tx="leo.20200630221611.5">## 第4週
 
 &lt;small&gt;用OBS進行線上開會
 
@@ -422,7 +435,7 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200630221611.7">## W5
+<t tx="leo.20200630221611.7">## 第5週
 
 &lt;small&gt;這周主要是在做分組的翻譯 
 
@@ -436,15 +449,106 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200630221611.9">## W6
+<t tx="leo.20200630221611.9">## 第6週
 
 &lt;small&gt;這周主要是在做分組的翻譯 
-
+&lt;hr&gt;
 &lt;iframe src="https://s40723130.github.io/cd2020/content/week6.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
 
 
 
+</t>
+<t tx="leo.20200630231640.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20200630231640.12">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630231640.13">## 第15週
+
+使用CoppeliaSim將零件組裝
+
+&lt;hr&gt;
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week15.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200630231640.14">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630231640.15">## 第16週
+
+&lt;img src="https://s40723130.github.io/cd2020/images/17%E6%93%B7%E5%8F%963.PNG" width="700" height="400" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;img src="https://s40723130.github.io/cd2020/images/17%E6%93%B7%E5%8F%964.PNG" width="700" height="400" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200630231640.16">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630231640.17">## 第17週
+&lt;small&gt;
+組裝完成的是屬於skin的部分，所以需要畫出實體在把skin套上
+&lt;hr&gt;
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week17.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20200630231640.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630231640.3"># 期末(10~18週)
+## 第11-12週
+
+設定VirtualBox
+
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week11-12.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20200630231640.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630231640.9">## 第13-14週
+
+&lt;small&gt;
+接手分組前的CoppeliaSim學習
+&lt;hr&gt;
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week13-14.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 </t>
 </tnodes>
 </leo_file>
