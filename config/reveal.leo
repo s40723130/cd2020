@@ -31,21 +31,27 @@
 <v t="leo.20180902120523.8"><vh>slides div</vh>
 <v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
-</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
-<v t="leo.20200624100929.1"><vh>快捷鍵</vh>
-<v t="leo.20200624102658.1"><vh>投影片快捷鍵</vh></v>
-<v t="leo.20200624101530.1"><vh>各式內容引用範例</vh>
-<v t="leo.20200624101530.2"><vh>導入數學符號與方程式</vh>
-<v t="leo.20200624101530.3"><vh>LaTeX 格式方程式</vh></v>
 </v>
-<v t="leo.20200624101530.4"><vh>導入縮排程式碼</vh>
-<v t="leo.20200624101530.5"><vh>引用程式碼</vh></v>
+<v t="leo.20200630221611.1"><vh>各式內容引用範例</vh>
+<v t="leo.20200630221611.2"><vh>W1</vh>
+<v t="leo.20200630221611.3"><vh>W1</vh></v>
 </v>
-<v t="leo.20200624101530.6"><vh>導入影片</vh>
-<v t="leo.20200624101530.7"><vh>iframe 導入影片</vh></v>
+<v t="leo.20200630221611.4"><vh>W2</vh>
+<v t="leo.20200630221611.5"><vh>W2</vh></v>
 </v>
+<v t="leo.20200630221611.6"><vh>W4</vh>
+<v t="leo.20200630221611.7"><vh>W4</vh></v>
+</v>
+<v t="leo.20200630221611.8"><vh>W6</vh>
+<v t="leo.20200630221611.9"><vh>W6</vh></v>
+</v>
+<v t="leo.20200630221611.10"><vh>W7</vh>
+<v t="leo.20200630221611.11"><vh>W7</vh></v>
+</v>
+<v t="leo.20200630221611.12"><vh>W8</vh>
+<v t="leo.20200630221611.13"><vh>w8</vh></v>
 </v>
 </v>
 </v>
@@ -59,9 +65,10 @@
 </vnodes>
 <tnodes>
 <t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">## 40723130 協同產品設計實習
+<t tx="leo.20180902120523.10"># 40723130 協同產品設計實習
 [網站](https://s40723130.github.io/cd2020/content/index.html)
 
+[倉儲](https://github.com/s40723130/cd2020)
 
 
 
@@ -75,7 +82,7 @@
 
 						
 </t>
-<t tx="leo.20180902120523.12"># 期中(1~8週)
+<t tx="leo.20180902120523.12">## 期中(1~8週)
 
 
 
@@ -327,21 +334,12 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="leo.20180902120538.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
-<t tx="leo.20200624100929.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20200624101530.1">&lt;section&gt;
+<t tx="leo.20200630221611.1">&lt;section&gt;
 @others
 &lt;/section&gt;
 
 </t>
-<t tx="leo.20200624101530.2">&lt;section data-markdown&gt;
+<t tx="leo.20200630221611.10">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
@@ -352,8 +350,18 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200624101530.3">123</t>
-<t tx="leo.20200624101530.4">&lt;section data-markdown&gt;
+<t tx="leo.20200630221611.11">## W7
+
+翻譯&amp;進行直播測試
+
+[Camera Sensors](https://cyberbotics.com/doc/guide/camera-sensors)
+
+[DistanceSensor Sensors](https://cyberbotics.com/doc/guide/distancesensor-sensors)
+&lt;hr&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hEZbNIzWe64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20200630221611.12">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
 @others
@@ -364,8 +372,62 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200624101530.5">4855</t>
-<t tx="leo.20200624101530.6">&lt;section data-markdown&gt;
+<t tx="leo.20200630221611.13">## W8
+
+下載[CoppeliaSim](https://www.coppeliarobotics.com/)，並放到可攜系統上
+
+將 leo 升級到6.2.1
+</t>
+<t tx="leo.20200630221611.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630221611.3">## 期中(1~8週)
+### W3
+
+用OBS進行線上開會討論分組
+
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week3.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200630221611.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630221611.5">## W4
+
+&lt;small&gt;用OBS進行線上開會
+
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week4.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200630221611.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20200630221611.7">## W5
+
+&lt;small&gt;這周主要是在做分組的翻譯 
+
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week5.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200630221611.8">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
     &lt;/script&gt;
@@ -374,9 +436,12 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200624101530.7">789
-</t>
-<t tx="leo.20200624102658.1"># 期中(1~8週)
+<t tx="leo.20200630221611.9">## W6
+
+&lt;small&gt;這周主要是在做分組的翻譯 
+
+&lt;iframe src="https://s40723130.github.io/cd2020/content/week6.html" width="900" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
 
 
 
